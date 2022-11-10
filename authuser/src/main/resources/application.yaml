@@ -1,0 +1,17 @@
+server:
+  port: 8087
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/ead-authuser
+    username: postgres
+    password: 23031990
+  jpa:
+    hibernate:
+      ddl-auto: update
+      dialect: org.hibernate.dialect.PosgreSQLDialect
+      jdbc:
+        lob.non-contextual-creation: true # desabilitando a consulta aos metadados para nao aparecer erros no console
+    properties:
+      hibernate:
+        show_sql: true #config para aparecer os comandos do sql nos logs
